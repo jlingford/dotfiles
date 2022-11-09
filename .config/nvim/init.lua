@@ -6,6 +6,7 @@ vim.g.loaded_netrwPlugin = 1
 -- plugins require functions
 require('plugins')
 require('nvim-tree').setup()
+require('lspconfig').pyright.setup{}
 
 
 --- OPTIONS ---
@@ -25,6 +26,7 @@ vim.o.spell = true 		-- highlights spelling mistakes
 vim.o.spelllang = 'en_gb' 	-- english english spell check
 vim.g.updatetime = 1000		-- updates the swap file every 1000 ms, important for gitgutter
 vim.g.gitgutter_async = 0 	-- gitgutter auto-updates with every edit
+vim.g.laststatus = 2 		-- always have statusline on
 
 
 --- MAPPINGS ---
@@ -36,6 +38,20 @@ vim.keymap.set('i', '{', '{}<ESC>hli', { noremap = true })
 vim.keymap.set('i', "'", "''<ESC>hli", { noremap = true }) 
 vim.keymap.set('i', '"', '""<ESC>hli', {noremap = true}) -- autocomplete double quotes
 vim.keymap.set('i', '<', '<><ESC>hli', {noremap = true}) -- autocomplete triangle braces
+-- vim.keymap.set('n', '<leader>oi<CR>', '<cmd>e<space>~/.config/nvim/init.lua<CR>', {noremap = true}) -- SPACE oi = open init
+-- vim.keymap.set('n', '<leader>op<CR>', '<cmd>e<space>~/.config/nvim/lua/plugins.lua<CR>', {noremap = true}) -- SPACE op = open plugins
+-- vim.keymap.set('n', '<leader>ob<CR>', '<cmd>e<space>~/.config/omf/key_bindings.fish<CR>', {noremap = true}) -- SPACE ob = open fish keybindings
+
+-- Window splits
+vim.o.splitbelow = true 	-- opens new window below
+vim.o.splitright = true 	-- opens new window to the right, combined it will open new window vertically to the right
+vim.keymap.set('n', '<leader>w', '<cmd>vsplit_f<CR>') -- open new window vertically and go to it
+vim.keymap.set('n', '<leader>f', '<cmd>NvimTreeToggle<CR>') -- toggles nvim-tree
+vim.keymap.set('n', '<leader>t', '<cmd>new<space>term://bash<CR><cmd>resize<space>10<CR>')
+vim.keymap.set('', '<C-h>', '<C-w>h<CR>')
+vim.keymap.set('', '<C-j>', '<C-w>j<CR>')
+vim.keymap.set('', '<C-k>', '<C-w>k<CR>')
+vim.keymap.set('', '<C-l>', '<C-w>l<CR>')
 
 -- Movement around wrapped lines
 vim.keymap.set('n', 'j', 'v:count ? "j" : "gj"', { noremap = true, expr = true, desc = 'Move down (including wrapping lines)' })
@@ -46,16 +62,24 @@ vim.keymap.set('i', '<Up>', 'pumvisible() ? "k" : "<C-o>gk"', { noremap = true, 
 vim.keymap.set('i', '<Down>', 'pumvisible() ? "j" : "<C-o>gj"', { noremap = true, expr = true, desc = 'Move down (including wrapping lines)' })
 
 
---- Mappings for netrw ---
-vim.g.netrw_liststyle = 3 	-- tree-style folder view
-vim.keymap.set("n", "<leader>f", "<cmd>20Vex<CR>") 	-- open vertical split of netrw
-
-
 --- Plugin options ---
 -- vim.cmd[[colorscheme gruvbox]]
 vim.cmd[[colorscheme tokyonight]]
 
-
+-- plugins to add
+-- airblade/vim-rooter
+-- hrsh7th/nvim-cmp
+-- neovim/nvim-lspconfig
+-- {'nvim-treesitter/nvim-treesitter'},
+-- {'nvim-treesitter/nvim-treesitter-context'},
+-- {'nvim-treesitter/nvim-treesitter-textobjects'},
+-- nvim-lua/plenary.nvim
+-- ncm2/ncm2-bufword
+-- ncm2/ncm2-path
+-- ncm2/ncm2-jedi
+-- gaalcaras/ncm-R
+-- jalvesaq/Nvim-R -- required for the previous plugin
+--
 
 
 -- hello world
