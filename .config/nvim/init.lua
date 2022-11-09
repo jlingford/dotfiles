@@ -38,6 +38,7 @@ vim.keymap.set('i', '{', '{}<ESC>hli', { noremap = true })
 vim.keymap.set('i', "'", "''<ESC>hli", { noremap = true }) 
 vim.keymap.set('i', '"', '""<ESC>hli', {noremap = true}) -- autocomplete double quotes
 vim.keymap.set('i', '<', '<><ESC>hli', {noremap = true}) -- autocomplete triangle braces
+vim.keymap.set('i', '<tab><tab>', '<Right>', {noremap = true}) -- double tab in insert mode to Right arrow
 -- vim.keymap.set('n', '<leader>oi<CR>', '<cmd>e<space>~/.config/nvim/init.lua<CR>', {noremap = true}) -- SPACE oi = open init
 -- vim.keymap.set('n', '<leader>op<CR>', '<cmd>e<space>~/.config/nvim/lua/plugins.lua<CR>', {noremap = true}) -- SPACE op = open plugins
 -- vim.keymap.set('n', '<leader>ob<CR>', '<cmd>e<space>~/.config/omf/key_bindings.fish<CR>', {noremap = true}) -- SPACE ob = open fish keybindings
@@ -52,6 +53,8 @@ vim.keymap.set('', '<C-h>', '<C-w>h<CR>')
 vim.keymap.set('', '<C-j>', '<C-w>j<CR>')
 vim.keymap.set('', '<C-k>', '<C-w>k<CR>')
 vim.keymap.set('', '<C-l>', '<C-w>l<CR>')
+vim.keymap.set('', '<C-Left>', '<C-w><') -- resize window width with Ctrl-Left/Right arrow
+vim.keymap.set('', '<C-Right>', '<C-w>>')
 
 -- Movement around wrapped lines
 vim.keymap.set('n', 'j', 'v:count ? "j" : "gj"', { noremap = true, expr = true, desc = 'Move down (including wrapping lines)' })
@@ -82,4 +85,4 @@ vim.cmd[[colorscheme tokyonight]]
 --
 
 
--- hello world
+-- hello worl testing some stuff {helld
