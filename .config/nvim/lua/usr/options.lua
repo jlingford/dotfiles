@@ -1,6 +1,5 @@
 --- OPTIONS ---
 
-
 -- disable netrw so nvim-tree.lua plugin works
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1

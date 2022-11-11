@@ -1,5 +1,21 @@
 --- Plugins using Packer ---
 
+-- Automatically install packer if not already installed
+-- 
+-- local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
+-- if fn.empty(fn.glob(install_path)) > 0 then
+-- 	PACKER_BOOTSTRAP = fn.system({
+-- 		"git",
+-- 		"clone",
+-- 		"--depth",
+-- 		"1",
+-- 		"https://github.com/wbthomason/packer.nvim",
+-- 		install_path,
+-- 	})
+-- 	print("Installing packer close and reopen Neovim...")
+-- 	vim.cmd([[packadd packer.nvim]])
+-- end
+
 -- Use a protected call so we don't error out on first use
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
@@ -34,11 +50,13 @@ return require('packer').startup(function(use)
   use 'airblade/vim-gitgutter'
   use 'akinsho/bufferline.nvim'
   use 'akinsho/toggleterm.nvim'
+  use 'nvim-lua/plenary.nvim' -- useful lua functions used in lots of plugins
+  use 'nvim-lua/popup.nvim' -- popup API from vim into neovim
 
   -- lsp 
   use 'neovim/nvim-lspconfig'
-  -- use "williamboman/mason.nvim" -- simple to use language server installer
-  -- use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
+  use "williamboman/mason.nvim" -- simple to use language server installer
+  -- use "williamboman/mason-lspconfig.nvim" -- additional mason.nvim support 
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
