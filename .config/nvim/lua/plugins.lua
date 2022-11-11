@@ -16,7 +16,13 @@ return require('packer').startup(function(use)
 
   -- useful plugins
   use 'airblade/vim-gitgutter'
+  use 'akinsho/bufferline.nvim'
+  use 'akinsho/toggleterm.nvim'
+
+  -- lsp and autocomplete support
   use 'neovim/nvim-lspconfig'
+  -- use 'hrsh7th/nvim-cmp'
+  -- use 'hrsh7th/cmp-buffer'
 
   -- nvim-tree.lua
   use {
@@ -34,7 +40,6 @@ return require('packer').startup(function(use)
     }
 
 end)
-
 
 
 
