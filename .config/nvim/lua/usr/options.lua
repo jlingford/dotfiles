@@ -24,5 +24,7 @@ vim.o.spelllang = 'en_gb' 	-- english english spell check
 vim.g.updatetime = 1000		-- updates the swap file every 1000 ms, important for gitgutter
 vim.g.gitgutter_async = 0 	-- gitgutter auto-updates with every edit
 vim.g.laststatus = 2 		-- always have statusline on
+vim.o.splitbelow = true 	-- opens new window below
+vim.o.splitright = true 	-- opens new window to the right, combined it will open new window vertically to the right
 
 
