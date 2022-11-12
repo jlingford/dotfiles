@@ -82,6 +82,20 @@ return require('packer').startup(function(use)
       requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
 
+    -- telescope
+    use { 
+      'nvim-telescope/telescope.nvim', tag = '0.1.0', requires = { { 'nvim-lua/plenary.nvim' }}
+    }
+    
+    -- treesitter
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = function()
+            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+            ts_update()
+        end,
+    }
+    
 end)
 
 -- Automatically set up your configuration after cloning packer.nvim

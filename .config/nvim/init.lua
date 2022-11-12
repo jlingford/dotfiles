@@ -13,6 +13,7 @@ require('usr.cmp')
 require('bufferline').setup{}
 require('toggleterm').setup()
 require('lualine').setup()
+-- require('usr.telescope')
 
 
 --- Plugin options ---

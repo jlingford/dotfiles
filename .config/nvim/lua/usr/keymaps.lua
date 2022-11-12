@@ -18,6 +18,7 @@ vim.keymap.set('i', '"', '""<ESC>hli', {noremap = true}) -- autocomplete double 
 vim.keymap.set('i', '<', '<><ESC>hli', {noremap = true}) -- autocomplete triangle braces
 vim.keymap.set('i', '<tab><tab>', '<Right>', {noremap = true}) -- double tab in insert mode to Right arrow
 vim.keymap.set('n', '<leader>b', '<cmd>bN<CR>') -- cycle through buffers
+vim.keymap.set('n', '<leader>s', "<cmd>lua<space>require('telescope.builtin').find_files()<CR>", { noremap = true })
 
 -- Window splits
 vim.keymap.set('n', '<leader>w', '<cmd>vsplit_f<CR>') -- open new window vertically and go to it
