@@ -10,13 +10,14 @@
 
 vim.keymap.set('n', ';', ':', { noremap = true })	-- maps semicolon to colon 
 vim.keymap.set('n', ':', ';', { noremap = true })	-- maps colon to semicolon 
+vim.keymap.set('i', ';', ':', { noremap = true })	-- maps semicolon to colon 
+vim.keymap.set('i', ':', ';', { noremap = true })	-- maps colon to semicolon 
 vim.keymap.set('i', '(', '()<ESC>hli', { noremap = true }) 
 vim.keymap.set('i', '[', '[]<ESC>hli', { noremap = true }) 
 vim.keymap.set('i', '{', '{}<ESC>hli', { noremap = true }) 
 vim.keymap.set('i', "'", "''<ESC>hli", { noremap = true }) 
 vim.keymap.set('i', '"', '""<ESC>hli', {noremap = true}) -- autocomplete double quotes
 vim.keymap.set('i', '<', '<><ESC>hli', {noremap = true}) -- autocomplete triangle braces
-vim.keymap.set('i', '<tab><tab>', '<Right>', {noremap = true}) -- double tab in insert mode to Right arrow
 vim.keymap.set('n', '<leader>b', '<cmd>bN<CR>') -- cycle through buffers
 vim.keymap.set('n', '<leader>s', "<cmd>lua<space>require('telescope.builtin').find_files()<CR>", { noremap = true })
 
@@ -61,5 +62,4 @@ vim.keymap.set("x", "<A-k>", ":move '<-2<CR>gv-gv", { noremap = true })
 -- Visual --
 -- Stay in indent mode
 -- keymap("v", "<", "<gv", opts)
--- keymap("v", ">", ">gv", opts)
-
+-- keymap("v", ">", ">gv", opt
