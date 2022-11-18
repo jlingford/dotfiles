@@ -25,12 +25,17 @@ vim.keymap.set('n', '<leader>s', "<cmd>lua<space>require('telescope.builtin').fi
 vim.keymap.set('n', '<leader>w', '<cmd>vsplit_f<CR>') -- open new window vertically and go to it
 vim.keymap.set('n', '<leader>f', '<cmd>NvimTreeToggle<CR>') -- toggles nvim-tree
 vim.keymap.set('n', '<leader>t', '<cmd>ToggleTerm<space>size=10<space>direction=horizontal<CR>')
+vim.keymap.set('n', '<leader>T', '<cmd>ToggleTerm<space>size=80<space>direction=vertical<CR>ipython<CR>')
 vim.keymap.set('', '<C-h>', '<C-w>h<CR>')
 vim.keymap.set('', '<C-j>', '<C-w>j<CR>')
 vim.keymap.set('', '<C-k>', '<C-w>k<CR>')
 vim.keymap.set('', '<C-l>', '<C-w>l<CR>')
+
+-- Resize window splits
 vim.keymap.set('', '<C-Left>', '<C-w><') -- resize window width with Ctrl-Left/Right arrow
 vim.keymap.set('', '<C-Right>', '<C-w>>')
+vim.keymap.set('', '<C-Up>', '<C-w>+')
+vim.keymap.set('', '<C-Down>', '<C-w>-')
 
 -- Better terminal navigation
 vim.keymap.set("t", "<C-h>", "<C-\\><C-N><C-w>h", { silent = true })
