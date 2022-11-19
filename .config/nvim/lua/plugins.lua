@@ -53,7 +53,6 @@ return require('packer').startup(function(use)
   use 'nvim-lua/plenary.nvim' -- useful lua functions used in lots of plugins
   use 'nvim-lua/popup.nvim' -- popup API from vim into neovim
   use 'junegunn/goyo.vim' -- Goyo, distraction free writing
-  use 'hkupty/iron.nvim' -- copy lines into REPL easily
 
   -- lsp 
   use 'neovim/nvim-lspconfig'

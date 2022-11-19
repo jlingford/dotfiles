@@ -30,6 +30,8 @@ vim.keymap.set('n', '<leader>w', '<cmd>vsplit_f<CR>') -- open new window vertica
 vim.keymap.set('n', '<leader>f', '<cmd>NvimTreeToggle<CR>') -- toggles nvim-tree
 vim.keymap.set('n', '<leader>t', '<cmd>ToggleTerm<space>size=10<space>direction=horizontal<CR>')
 vim.keymap.set('n', '<leader>T', '<cmd>ToggleTerm<space>size=80<space>direction=vertical<CR>ipython<CR>')
+
+-- Window navigation
 vim.keymap.set('', '<C-h>', '<C-w>h<CR>')
 vim.keymap.set('', '<C-j>', '<C-w>j<CR>')
 vim.keymap.set('', '<C-k>', '<C-w>k<CR>')
@@ -65,11 +67,11 @@ vim.keymap.set("x", "<A-k>", ":move '<-2<CR>gv-gv", { noremap = true })
 vim.keymap.set('n', '<leader>zn', '<cmd>Goyo<CR>', { noremap = true })
 
 -- Startup-nvim bookmarks
-vim.g.startup_bookmarks = {
-    ['I'] = '~/.config/nvim/init.lua',
-    ['F'] = '~/.config/omf/key_bindings.fish',
-    ['K'] = '~/kungfu-vim.md',
-}
+-- vim.g.startup_bookmarks = {
+--     ['I'] = '~/.config/nvim/init.lua',
+--     ['F'] = '~/.config/omf/key_bindings.fish',
+--     ['K'] = '~/kungfu-vim.md',
+-- }
 
 -- experimental
 -- vim.keymap.set('n', '<leader>oi<CR>', '<cmd>e<space>~/.config/nvim/init.lua<CR>', {noremap = true}) -- SPACE oi = open init
