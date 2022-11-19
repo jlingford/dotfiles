@@ -18,8 +18,12 @@ vim.keymap.set('i', '{', '{}<ESC>hli', { noremap = true })
 vim.keymap.set('i', "'", "''<ESC>hli", { noremap = true }) 
 vim.keymap.set('i', '"', '""<ESC>hli', {noremap = true}) -- autocomplete double quotes
 vim.keymap.set('i', '<', '<><ESC>hli', {noremap = true}) -- autocomplete triangle braces
+
+-- Custom keymaps
 vim.keymap.set('n', '<leader>b', '<cmd>bN<CR>') -- cycle through buffers
 vim.keymap.set('n', '<leader>s', "<cmd>lua<space>require('telescope.builtin').find_files()<CR>", { noremap = true })
+vim.keymap.set('v', '<leader>ya', '"+y<C-w>l<C-\\><C-N>pi<CR>') -- copy & send visual selection to REPL terminal on left and paste
+vim.keymap.set('n', '<leader>yl', '"+yy<C-w>l<C-\\><C-N>pi<CR>') -- copy & send single line to REPL terminal on left and paste
 
 -- Window splits
 vim.keymap.set('n', '<leader>w', '<cmd>vsplit_f<CR>') -- open new window vertically and go to it
@@ -56,6 +60,16 @@ vim.keymap.set("x", "J", ":move '>+1<CR>gv-gv", { noremap = true })
 vim.keymap.set("x", "K", ":move '<-2<CR>gv-gv", { noremap = true })
 vim.keymap.set("x", "<A-j>", ":move '>+1<CR>gv-gv", { noremap = true })
 vim.keymap.set("x", "<A-k>", ":move '<-2<CR>gv-gv", { noremap = true })
+
+-- True-zen.nvim keymaps
+vim.keymap.set('n', '<leader>zn', '<cmd>Goyo<CR>', { noremap = true })
+
+-- Startup-nvim bookmarks
+vim.g.startup_bookmarks = {
+    ['I'] = '~/.config/nvim/init.lua',
+    ['F'] = '~/.config/omf/key_bindings.fish',
+    ['K'] = '~/kungfu-vim.md',
+}
 
 -- experimental
 -- vim.keymap.set('n', '<leader>oi<CR>', '<cmd>e<space>~/.config/nvim/init.lua<CR>', {noremap = true}) -- SPACE oi = open init

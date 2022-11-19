@@ -52,6 +52,8 @@ return require('packer').startup(function(use)
   use 'akinsho/toggleterm.nvim'
   use 'nvim-lua/plenary.nvim' -- useful lua functions used in lots of plugins
   use 'nvim-lua/popup.nvim' -- popup API from vim into neovim
+  use 'junegunn/goyo.vim' -- Goyo, distraction free writing
+  use 'hkupty/iron.nvim' -- copy lines into REPL easily
 
   -- lsp 
   use 'neovim/nvim-lspconfig'
@@ -95,7 +97,14 @@ return require('packer').startup(function(use)
             ts_update()
         end,
     }
-    
+
+    use {
+	"startup-nvim/startup.nvim",
+	requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
+	config = function()
+	    require"startup".setup()
+        end
+    }
 end)
 
 -- Automatically set up your configuration after cloning packer.nvim
@@ -106,3 +115,4 @@ end)
 	-- end
 -- end)
 
+  -- use 'Pocco81/true-zen.nvim' -- Goyo style
