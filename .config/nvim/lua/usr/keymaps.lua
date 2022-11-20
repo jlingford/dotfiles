@@ -26,6 +26,12 @@ vim.keymap.set('n', '<leader>s', "<cmd>lua<space>require('telescope.builtin').fi
 vim.keymap.set('v', '<leader>ya', '"+y<C-w>l<C-\\><C-N>pi<CR>') -- copy & send visual selection to REPL terminal on left and paste
 vim.keymap.set('n', '<leader>yl', '"+yy<C-w>l<C-\\><C-N>pi<CR>') -- copy & send single line to REPL terminal on left and paste
 
+-- moving lines and visual blocks of lines easily
+vim.keymap.set('n', '<A-j>', '<cmd>m+<CR>==', { noremap = true })
+vim.keymap.set('n', '<A-k>', '<cmd>m-2<CR>==', { noremap = true })
+vim.keymap.set('v', '<A-j>', "<cmd>m<space>'>+1<CR>gv=gv", { noremap = true })
+vim.keymap.set('v', '<A-k>', "<cmd>m<space>'<-2<CR>gv=gv", { noremap = true })
+
 -- Window splits
 vim.keymap.set('n', '<leader>w', '<cmd>vsplit_f<CR>') -- open new window vertically and go to it
 vim.keymap.set('n', '<leader>f', '<cmd>NvimTreeToggle<CR>') -- toggles nvim-tree
@@ -74,12 +80,12 @@ vim.keymap.set('n', '<leader>zn', '<cmd>Goyo<CR>', { noremap = true })
 --     ['K'] = '~/kungfu-vim.md',
 -- }
 
+-- vim.keymap.set('n', '<leader>t', '<cmd>new<space>term://bash<CR><cmd>resize<space>10<CR>')
+
 -- experimental
 -- vim.keymap.set('n', '<leader>oi<CR>', '<cmd>e<space>~/.config/nvim/init.lua<CR>', {noremap = true}) -- SPACE oi = open init
 -- vim.keymap.set('n', '<leader>op<CR>', '<cmd>e<space>~/.config/nvim/lua/plugins.lua<CR>', {noremap = true}) -- SPACE op = open plugins
 -- vim.keymap.set('n', '<leader>ob<CR>', '<cmd>e<space>~/.config/omf/key_bindings.fish<CR>', {noremap = true}) -- SPACE ob = open fish keybindings
-
--- vim.keymap.set('n', '<leader>t', '<cmd>new<space>term://bash<CR><cmd>resize<space>10<CR>')
 
 -- Visual --
 -- Stay in indent mode
