@@ -28,4 +28,3 @@ vim.o.splitright = true 	-- opens new window to the right, combined it will open
 vim.g.clipboard = unnamedplus   -- copy and paste between vim and all other programs
 
 
-
