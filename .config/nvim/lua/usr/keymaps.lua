@@ -18,6 +18,7 @@ vim.keymap.set('i', '{', '{}<ESC>hli', { noremap = true })
 vim.keymap.set('i', "'", "''<ESC>hli", { noremap = true }) 
 vim.keymap.set('i', '"', '""<ESC>hli', {noremap = true}) -- autocomplete double quotes
 vim.keymap.set('i', '<', '<><ESC>hli', {noremap = true}) -- autocomplete triangle braces
+vim.keymap.set('i', '`', '``<ESC>hli', {noremap = true}) -- autocomplete ticks for code comments
 
 -- Custom keymaps
 vim.keymap.set('n', '<leader>b', '<cmd>bN<CR>') -- cycle through buffers

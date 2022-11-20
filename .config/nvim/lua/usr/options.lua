@@ -20,10 +20,12 @@ vim.o.signcolumn = 'yes' 	-- column left of numbers to show errors
 vim.o.textwidth = 90 		-- line length above which to break a line
 vim.o.spell = true 		-- highlights spelling mistakes
 vim.o.spelllang = 'en_gb' 	-- english english spell check
-vim.g.updatetime = 1000		-- updates the swap file every 1000 ms, important for gitgutter
+vim.g.updatetime = 500		-- updates the swap file every X no. of milliseconds, important for gitgutter
 vim.g.gitgutter_async = 0 	-- gitgutter auto-updates with every edit
 vim.g.laststatus = 2 		-- always have statusline on
 vim.o.splitbelow = true 	-- opens new window below
 vim.o.splitright = true 	-- opens new window to the right, combined it will open new window vertically to the right
+vim.g.clipboard = unnamedplus   -- copy and paste between vim and all other programs
+
 
 
