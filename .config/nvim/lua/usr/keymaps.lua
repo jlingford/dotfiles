@@ -23,8 +23,8 @@ vim.keymap.set('i', '`', '``<ESC>hli', {noremap = true}) -- autocomplete ticks f
 -- Custom keymaps
 vim.keymap.set('n', '<leader>b', '<cmd>bN<CR>') -- cycle through buffers
 vim.keymap.set('n', '<leader>s', "<cmd>lua<space>require('telescope.builtin').find_files()<CR>", { noremap = true })
-vim.keymap.set('v', '<leader>ya', '"+y<C-w>l<C-\\><C-N>pi<CR>') -- copy & send visual selection to REPL terminal on left and paste
-vim.keymap.set('n', '<leader>yl', '"+yy<C-w>l<C-\\><C-N>pi<CR>') -- copy & send single line to REPL terminal on left and paste
+vim.keymap.set('v', '<leader>r', '"+y<C-w>l<C-\\><C-N>pi<CR>') -- copy & send visual selection to REPL terminal on left and paste
+vim.keymap.set('n', '<leader>r', '"+yy<C-w>l<C-\\><C-N>pi<CR>') -- copy & send single line to REPL terminal on left and paste
 
 -- moving lines and visual blocks of lines easily
 vim.keymap.set('n', '<A-j>', '<cmd>m+<CR>==', { noremap = true })
