@@ -90,14 +90,10 @@ return require('packer').startup(function(use)
     }
     
     -- treesitter
-    use {
-        'nvim-treesitter/nvim-treesitter',
-        run = function()
-            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-            ts_update()
-        end,
-    }
+    use 'nvim-treesitter/nvim-treesitter'
+    use 'p00f/nvim-ts-rainbow'
 
+    -- Startup screen
     use {
 	"startup-nvim/startup.nvim",
 	requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},

@@ -14,6 +14,7 @@ require('bufferline').setup{}
 require('toggleterm').setup()
 require('lualine').setup()
 require('usr.null-ls')
+require('usr.treesitter')
 -- require('usr.telescope')
 
 
