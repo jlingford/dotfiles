@@ -58,6 +58,7 @@ return require('packer').startup(function(use)
   use 'neovim/nvim-lspconfig'
   use "williamboman/mason.nvim" -- simple to use language server installer
   -- use "williamboman/mason-lspconfig.nvim" -- additional mason.nvim support 
+  use 'jose-elias-alvarez/null-ls.nvim' -- formatting and linting (e.g. Prettier and Flake8 support)
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
