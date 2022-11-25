@@ -8,3 +8,5 @@ Minimal neovim config with sensible options, keymaps, and useful plugins.
 - toggleterm
 - git gutter
 
+`code goes here` 
+

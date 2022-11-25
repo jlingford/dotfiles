@@ -15,6 +15,7 @@ configs.setup {
 	'javascript',
 	'json',
 	'markdown',
+	'markdown_inline',
 	'r',
 	'sql'
     },
